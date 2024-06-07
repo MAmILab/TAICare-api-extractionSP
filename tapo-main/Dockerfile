@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /usr/src/tapo-main
 
 #new
-COPY ../Cargo.toml Cargo.toml
+#COPY Cargo.toml Cargo.toml
 
 #new
 #RUN git clone https://github.com/MAmILab/TAICare-api-extractionSP.git
