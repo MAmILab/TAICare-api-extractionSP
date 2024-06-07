@@ -17,17 +17,18 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /usr/src/tapo-main
 
 #new
-COPY Cargo.toml Cargo.toml
+#COPY Cargo.toml Cargo.toml
 
 #new
 #RUN git clone https://github.com/MAmILab/TAICare-api-extractionSP.git
 
 #new
-#RUN cd tapo-main
+RUN cd tapo-main
 
 COPY . .
 RUN cargo build --release
 
+#new
 #RUN cargo install --path .
 
 FROM debian:bookworm-slim
