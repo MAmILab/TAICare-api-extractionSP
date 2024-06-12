@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: taicareuser/taicare-docker-hub-repository:latest
+          images: taicareuser/taicare-docker-hub-repository
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -31,5 +31,6 @@ jobs:
           context: .
           file: ./tapo-main/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          #tags: ${{ steps.meta.outputs.tags }}
+          tags: latest
           labels: ${{ steps.meta.outputs.labels }}
