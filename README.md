@@ -38,8 +38,9 @@ cargo run --release
 En caso de querer ejecutar esta API utilizando Docker para una mayor independencia del hardware, se utilizará la siguiente imagen:
 
 ```bash
-docker pull -a taicareuser/taicare-docker-hub-respository
-docker run -e TAPO_USERNAME='nombre_usuario' -e TAPO_PASSWORD='password' -e MONGODB_URI='mongodb_uri' -e USE_DOCKER='true' --net=host taicareuser/taicare-docker-hub-respository
+docker login
+sudo docker pull -a taicareuser/taicare-docker-hub-respository
+sudo docker run -e TAPO_USERNAME='nombre_usuario' -e TAPO_PASSWORD='password' -e MONGODB_URI='mongodb_uri' -e USE_DOCKER='true' --net=host taicareuser/taicare-docker-hub-respository
 ```
 [!NOTE]
 El "docker engine" para el sistema operativo de la Raspberry Pi debe estar instalado.

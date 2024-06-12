@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: taicareuser/taicare-docker-hub-repository
+          images: taicareuser/taicare-docker-hub-repository:latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
