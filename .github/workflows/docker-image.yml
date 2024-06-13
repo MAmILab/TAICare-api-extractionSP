@@ -36,6 +36,6 @@ jobs:
         with:
           context: .
           file: ./tapo-main/Dockerfile
-          platforms: linux/arm64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: taicareuser/taicare-docker-hub-repository:latest
